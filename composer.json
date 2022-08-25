@@ -1,0 +1,19 @@
+{
+    "name": "ftuzlu/paytr",
+    "description": "PHP 8.1 Laravel PayTR entegrasyonu",
+    "autoload": {
+        "psr-4": {
+            "Ftuzlu\\Paytr\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Fatih Tuzlu",
+            "email": "fatihtuzlu07@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.1.0",
+        "guzzlehttp/guzzle": "^7.4"
+    }
+}
