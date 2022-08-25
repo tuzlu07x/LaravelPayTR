@@ -9,12 +9,12 @@
 <?php
 $payment = new Payment(
             [
-                "merchantId" => config("paytr.merchantId"),
-                "merchantKey" => config("paytr.merchantKey"),
-                "merchantSalt" => config("paytr.merchantSalt"),
-                "apiUrl" => config('paytr.apiUrl'),
-                "successUrl" => config('paytr.successUrl'),
-                "failUrl" => config('paytr.failUrl'),
+                "merchantId" => config("paytr.merchantId"), //Mağaza No (merchant_id)
+                "merchantKey" => config("paytr.merchantKey"), //Mağaza Parola (merchant_key)
+                "merchantSalt" => config("paytr.merchantSalt"),//Mağaza Gizli Anahtar (merchant_salt)
+                "apiUrl" => config('paytr.apiUrl'), // "https://www.paytr.com/odeme/api/get-token"
+                "successUrl" => config('paytr.successUrl'), // https://www.fatihtuzlu.com?status=success
+                "failUrl" => config('paytr.failUrl'), // https://www.fatihtuzlu.com?status=fail
             ],
 
             [
@@ -31,8 +31,8 @@ $payment = new Payment(
                     'quantity' => 1,
                 ],
                 "paymentAmount" => "999",
-                "noInstallment" => 0,
-                "maxInstallment" => 0,
+                "noInstallment" => 0, //taksit
+                "maxInstallment" => 0, //taksit
             ]
         );
         echo $payment->setMake(); //Bu kısımda { "status": "success", "token": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-XXXXXXXX"  } işlemin başarılı olduğunun testidir.
@@ -47,3 +47,4 @@ $payment = new Payment(
         <!-- Ödeme formunun açılması için gereken HTML kodlar / Bitiş -->
 ?>
 ```
+<p align="center">Umarım Yardımcı olabilmişimdir. :)) İyi Çalışmalar Dilerim.</p>
