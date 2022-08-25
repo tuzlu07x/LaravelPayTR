@@ -178,12 +178,13 @@ class Payment
         curl_close($ch);
 
         $result = json_decode($result, 1);
-        return ($result);
 
         if ($result['status'] == 'success') {
             $token = $result['token'];
         } else {
             die("PAYTR IFRAME failed. reason:" . $result['reason']);
         }
+
+        return $token;
     }
 }
